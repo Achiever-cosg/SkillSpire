@@ -1,0 +1,15 @@
+# Frontend
+/frontend/node_modules/
+/frontend/build/
+/frontend/.env
+
+# Backend
+/server/node_modules/
+/server/dist/
+/server/.env
+
+# Other common files to ignore
+.DS_Store
+Thumbs.db
+*.log
+*.lock
