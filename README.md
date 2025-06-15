@@ -1,6 +1,6 @@
 # SkillSpire  - EdTech Website
 
-SkillSpire is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) web application aimed at providing educational resources and tools for students and educators.
+SkillSpire is a full-stack MERN web application aimed at providing educational resources and tools for students and educators.
 
 ## Features
 
@@ -32,7 +32,7 @@ SkillSpire is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) web app
 
 3. Install dependencies for the Server:
 
-   cd server
+   cd server  
    npm install
 
 4. Start the development server:
@@ -41,15 +41,16 @@ SkillSpire is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) web app
 
 5. Navigate to the client directory and Install dependencies for the client/frontend:
 
-   cd frontend
+   cd frontend  
    npm install
 
 6. Start the Frontend:
 
    npm run start
 
-## Open http://localhost:3000 in your browser to view the application frontend.
+## 
+- Open http://localhost:3000 in your browser to view the application frontend.
+- The server will be running at http://localhost:5000.
 
-## The server will be running at http://localhost:5000.
-
-## With this guide, users can start both the server and frontend separately as required.
+## 
+- With this guide, users can start both the server and frontend separately as required.
