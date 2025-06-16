@@ -25,7 +25,7 @@ async function sendVerificationEmail(email, otp) {
         const mailResponse = await mailSender(email,
              "Verification EMAIL from SkillSpire",
              emailTemplate(otp));
-        console.log("Email sended Successfully!! => ", mailResponse);
+        console.log("Email sent Successfully!! => ", mailResponse);
     } catch(error) {
         // console.error(error);
         console.log("error while SENDING.. EMAIL", error);
