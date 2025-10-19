@@ -124,7 +124,6 @@ exports.getAllRating = async (req, res) => {
                                         .sort({rating:"desc"})
                                         .populate({
                                             path:"user",
-                                            // select:"firstName, lastName, email, image"
                                             select: "firstName lastName email image",
                                         })
                                         .populate({
@@ -133,16 +132,20 @@ exports.getAllRating = async (req, res) => {
                                         })
                                         .exec();
 
+        // Filter out reviews with null user or course references
+        const validReviews = allReviews.filter(review => review.user && review.course);
+
         return res.status(200).json({
             success:true,
-            message: " All reviews fetched successfully",
-            data : allReviews,
+            message: "All reviews fetched successfully",
+            data : validReviews,
         })
     } catch(error) {
-        console.error(error);
+        console.error("Error fetching reviews:", error);
         return res.status(500).json({
             success:false,
-            message:error.message,
+            message:"Failed to fetch reviews",
+            error: error.message,
         }) 
     }
 }
